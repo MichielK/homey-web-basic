@@ -9,6 +9,12 @@ window.addEventListener('load', function () {
   });
 
   var token = getQueryVariable('token');
+  if (token === undefined) {
+    this.alert('Token not present in URL - functionality will not work. Follow the how to on how to get this working');
+    console.log('See readme.md on https://github.com/MichielK/homey-web-basic on how to get this working');
+    document.getElementById('homeyname').innerHTML = '[Error: Token not present]';
+    return;
+  }
   token = atob(token);
   token = JSON.parse(token);
   api.setToken(token);
@@ -32,7 +38,7 @@ window.addEventListener('load', function () {
   }).catch(console.error);
 
   function renderHomey() {
-    homey.users.getUserMe().then(function(user) {
+    homey.users.getUserMe().then(function (user) {
       // user = type "HomeyAPI.ManagerUsers.User" - https://api.developer.athom.com/HomeyAPI.ManagerUsers.User.html
       // console.log(user);
       document.getElementById('homeyname').innerHTML = user.name;
