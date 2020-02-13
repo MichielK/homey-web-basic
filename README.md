@@ -1,18 +1,18 @@
 # homey-web-basic
-Very basic and small Homey-web-app-implementation
-Based on https://github.com/athombv/homey.ink
+Very basic and small Homey-web-app-implementation, based on https://github.com/athombv/homey.ink
 
-## Getting a Magic token
+# Getting a Magic token
 Credits to RobertKlep on community.athom.com: https://community.athom.com/t/homey-ink-an-e-ink-homey-dashboard/12367/8  
+## Steps to get magic token
 (Using Google Chrome):  
 Go to https://homey.ink/  
-Press f12 - developer tools should open  
-Go to tab 'Console'  
-On the web-page, scroll down to 'step 1 Log in with your Athom account.'  
-Click on 'Log in' button  
-Log in @ Homey  
+Press `F12` - developer tools should open  
+Go to tab `Console`  
+On the homey.ink web-page, scroll down to `step 1 Log in with your Athom account.`  
+Click on `Log in`-button  
+Log in @ Your Homey  
 Once you've logged in, the login-screen closes and you are back at the 'homey.ink' page  
-Look in your Developer tools - console, you will see:  
+Look in your Developer tools - console, you will see something like:  
 `Web URL: https://app.homey.ink/?theme=web&token=eyJf[...]iIn0%3D`  
 There is your magic token!
 
